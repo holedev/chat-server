@@ -1,0 +1,185 @@
+{% extends 'layout/base.html' %}
+{% block css %}
+<link href="{{ url_for('static', filename='css/home.css') }}" rel="stylesheet"/>
+{% endblock %}
+{% block content %}
+<header class="header">
+    <div class="header-wrap grid">
+        <div class="header-left">
+            <img src="{{ url_for('static', filename='img/hacker.png') }}" alt="logo"/>
+        </div>
+        <div class="header-search">
+            <input placeholder="Tìm tài khoản ..." tabindex="1" type="text" name="search" class="search-input">
+            <div class="search-icon">
+                <i class="fa-regular fa-keyboard"></i>
+            </div>
+            <ul class="sub-search">
+                <li class="sub-search__item">
+                    <div class="search-item__img">
+                        <img referrerpolicy="no-referrer"
+                             src="https://lh3.googleusercontent.com/a/AGNmyxYj8mOUj_A5-SWMYeyoB7n4u2tGdbvBozy9f4GD1w=s96-c"
+                             alt="user-avatar">
+                    </div>
+                    <div class="search-item__info">
+                        <div class="search-item__name">
+                            Hồ Phan Lê
+                        </div>
+                    </div>
+                </li>
+                <li class="sub-search__item">
+                    <div class="search-item__img">
+                        <img referrerpolicy="no-referrer"
+                             src="https://lh3.googleusercontent.com/a/AGNmyxYj8mOUj_A5-SWMYeyoB7n4u2tGdbvBozy9f4GD1w=s96-c"
+                             alt="user-avatar">
+                    </div>
+                    <div class="search-item__info">
+                        <div class="search-item__name">
+                            Hồ Phan Lê
+                        </div>
+                    </div>
+                </li>
+                <li class="sub-search__item">
+                    <div class="search-item__img">
+                        <img referrerpolicy="no-referrer"
+                             src="https://lh3.googleusercontent.com/a/AGNmyxYj8mOUj_A5-SWMYeyoB7n4u2tGdbvBozy9f4GD1w=s96-c"
+                             alt="user-avatar">
+                    </div>
+                    <div class="search-item__info">
+                        <div class="search-item__name">
+                            Hồ Phan Lê
+                        </div>
+                    </div>
+                </li>
+                <li class="sub-search__item">
+                    <div class="search-item__img">
+                        <img referrerpolicy="no-referrer"
+                             src="https://lh3.googleusercontent.com/a/AGNmyxYj8mOUj_A5-SWMYeyoB7n4u2tGdbvBozy9f4GD1w=s96-c"
+                             alt="user-avatar">
+                    </div>
+                    <div class="search-item__info">
+                        <div class="search-item__name">
+                            Hồ Phan Lê
+                        </div>
+                    </div>
+                </li>
+                <li class="sub-search__item">
+                    <div class="search-item__img">
+                        <img referrerpolicy="no-referrer"
+                             src="https://lh3.googleusercontent.com/a/AGNmyxYj8mOUj_A5-SWMYeyoB7n4u2tGdbvBozy9f4GD1w=s96-c"
+                             alt="user-avatar">
+                    </div>
+                    <div class="search-item__info">
+                        <div class="search-item__name">
+                            Hồ Phan Lê
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="header-right">
+            <div data-id="user-{{ current_user.id }}" class="user-profile">
+                <div class="user-profile__img">
+                    <img referrerpolicy="no-referrer" src="{{ current_user.avatar }}" alt="avatar-user"/>
+                </div>
+                <div class="user-profile__fullname">
+                    {{ current_user.fullname }}
+                </div>
+            </div>
+            <div class="btn btn-logout">
+                <a href="/logout">Đăng xuất</a>
+            </div>
+        </div>
+    </div>
+
+</header>
+<section class="main">
+    <div class="main-wrap grid">
+        <div class="main-left">
+            <ul class="left-list">
+                <!--                <li class="left-item active">-->
+                <!--                    <div class="left-item__avatar">-->
+                <!--                        <img src="https://lh3.googleusercontent.com/a/AGNmyxYj8mOUj_A5-SWMYeyoB7n4u2tGdbvBozy9f4GD1w=s96-c"-->
+                <!--                             alt="user">-->
+                <!--                    </div>-->
+                <!--                    <div class="left-item__info">-->
+                <!--                        <div class="left-item__name">-->
+                <!--                            Hồ Phan Lê-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </li>-->
+
+                <!--                <li class="left-item">-->
+                <!--                    <div class="left-item__avatar active">-->
+                <!--                        <img src="https://lh3.googleusercontent.com/a/AGNmyxYj8mOUj_A5-SWMYeyoB7n4u2tGdbvBozy9f4GD1w=s96-c"-->
+                <!--                             alt="user">-->
+                <!--                    </div>-->
+                <!--                    <div class="left-item__info">-->
+                <!--                        <div class="left-item__name">-->
+                <!--                            Hồ Phan Lê-->
+                <!--                        </div>-->
+                <!--                        <div class="left-item__last-mess">-->
+                <!--                            Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been-->
+                <!--                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a-->
+                <!--                            galley of type and scrambled it to make a type specimen book. It has survived not only five-->
+                <!--                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.-->
+                <!--                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum-->
+                <!--                            passages, and more recently with desktop publishing software like Aldus PageMaker including-->
+                <!--                            versions of Lorem Ipsum.-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                    <div class="left-item__state">-->
+                <!--                        <i class="fa-solid fa-circle-check"></i>-->
+                <!--                        <i class="fa-regular fa-circle-check"></i>-->
+                <!--                    </div>-->
+                <!--                </li>-->
+
+                <!--                <li class="left-item">-->
+                <!--                    <div class="left-item__avatar">-->
+                <!--                        <img src="https://lh3.googleusercontent.com/a/AGNmyxYj8mOUj_A5-SWMYeyoB7n4u2tGdbvBozy9f4GD1w=s96-c"-->
+                <!--                             alt="user">-->
+                <!--                    </div>-->
+                <!--                    <div class="left-item__info">-->
+                <!--                        <div class="left-item__name">-->
+                <!--                            Hồ Phan Lê-->
+                <!--                        </div>-->
+                <!--                        <div class="left-item__last-mess">-->
+                <!--                            Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been-->
+                <!--                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a-->
+                <!--                            galley of type and scrambled it to make a type specimen book. It has survived not only five-->
+                <!--                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.-->
+                <!--                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum-->
+                <!--                            passages, and more recently with desktop publishing software like Aldus PageMaker including-->
+                <!--                            versions of Lorem Ipsum.-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                    <div class="left-item__state active">-->
+                <!--                        <i class="fa-solid fa-circle-check"></i>-->
+                <!--                        <i class="fa-regular fa-circle-check"></i>-->
+                <!--                    </div>-->
+                <!--                </li>-->
+            </ul>
+        </div>
+
+        <div class="main-right">
+            <div class="main-right__conversation">
+                <h3 class="main-right__notify">Click one conversation or search friend to start!</h3>
+            </div>
+            <form class="main-right__chat">
+                <input tabindex="2" type="text" class="chat-input">
+                <button type="submit" tabindex="3" class="btn chat-send">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+
+</footer>
+
+{% block js %}
+<script defer charset="utf-8" src="{{ url_for('static', filename='js/socket.js') }}"></script>
+<script defer src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+{% endblock %}
+{% endblock %}
